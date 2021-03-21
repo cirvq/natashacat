@@ -4,7 +4,7 @@ import config
 
 bot = telebot.TeleBot(config.TOKEN)
  
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['hi'])
 def welcome(message):
     bot.send_message(message.chat.id, "привет {0.first_name}, я Наташа кошка".format(message.from_user, bot.get_me()))
 
@@ -25,6 +25,8 @@ def get_text_messages(message):
     if message.text.lower() == 'залупа':
         bot.reply_to(message, "это очень забавно)")
     if message.text.lower() == 'наташа ты альт?':
+        bot.reply_to(message, "я альт")
+    if message.text.lower() == 'наташа ты стрейт?':
         bot.reply_to(message, "я альт")
     if message.text.lower() == 'наташа кто твой хозяин?':
         bot.reply_to(message, "@klimenko1906")
