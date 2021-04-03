@@ -23,7 +23,7 @@ def send(message):
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     if message.text.lower() == 'залупа':
-        bot.reply_to(message, "это очень забавно)")
+        bot.reply_to(message, "это очень забавно😅")
     if message.text.lower() == 'наташа ты альт?':
         bot.reply_to(message, "я альт")
     if message.text.lower() == 'наташа ты стрейт?':
